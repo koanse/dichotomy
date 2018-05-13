@@ -1,0 +1,209 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "Файл"
+    BEGIN
+        MENUITEM "Выход",                       ID_EXIT_FROM_PROGRAM
+    END
+    POPUP "Вычисления"
+    BEGIN
+        MENUITEM "Калькулятор",                 ID_CALCULATOR
+        MENUITEM "Оптимизация",                 ID_OPTIMIZATION
+        MENUITEM "Функция",                     ID_FUNCTION
+    END
+    POPUP "Справка"
+    BEGIN
+        MENUITEM "Общие сведения",              ID_CONTENTS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ENTER_FORMULA DIALOGEX 0, 0, 197, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Задание функции"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Введите формулу:",IDC_STATIC,11,11,64,8
+    LTEXT           "F(x) =",IDC_STATIC,11,28,22,8
+    EDITTEXT        IDC_EDIT_FUNCTION,38,26,143,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDC_OK_FUNC,11,58,51,14
+    PUSHBUTTON      "Отмена",IDC_CANCEL_FUNC,72,58,51,14
+    PUSHBUTTON      "Помощь",IDC_HELP_FUNC,133,58,51,14
+END
+
+IDD_OPTIMIZATION_DIALOG DIALOGEX 0, 0, 195, 130
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_VISIBLE | WS_CAPTION
+CAPTION "Оптимизация"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Введите границы отрезка:",IDC_STATIC,7,7,92,8
+    LTEXT           "a =",IDC_STATIC,7,23,12,8
+    LTEXT           "b =",IDC_STATIC,107,23,12,8
+    EDITTEXT        IDC_EDIT_A,23,20,56,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_B,124,20,56,15,ES_AUTOHSCROLL
+    LTEXT           "Результаты оптимизации:",IDC_STATIC,7,73,90,8
+    LTEXT           "epsilon =",IDC_STATIC,37,54,30,8
+    EDITTEXT        IDC_EDIT_EPSILON,71,52,56,15,ES_AUTOHSCROLL
+    LTEXT           "Задайте точность ответа:",IDC_STATIC,7,40,92,8
+    LTEXT           "x min =",IDC_STATIC,19,87,25,8
+    EDITTEXT        IDC_EDIT_X_MIN,48,85,56,15,ES_AUTOHSCROLL
+    LTEXT           "F(x) min =",IDC_STATIC,10,104,34,8
+    EDITTEXT        IDC_EDIT_F_X_MIN,48,103,56,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Оптимизация",IDC_START_OPTIMIZATION,123,71,51,14
+    PUSHBUTTON      "Отмена",IDC_CANCEL_OPTIMIZATION,123,89,51,14
+    PUSHBUTTON      "Помощь",IDC_HELP_OPT,123,107,51,14
+END
+
+IDD_CALCULATOR_DIALOG DIALOGEX 0, 0, 195, 82
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_VISIBLE | WS_CAPTION
+CAPTION "Калькулятор"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Значение аргумента:   x =",IDC_STATIC,10,16,90,8
+    LTEXT           "Значение функции: F(x) =",IDC_STATIC,10,32,90,8
+    EDITTEXT        IDC_EDIT_ARGUMENT,108,14,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FUNCTION_VALUE,108,31,72,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Вычислить",IDC_CALCULATE,11,58,52,14
+    PUSHBUTTON      "Отмена",IDC_CANCEL_CALCULATE,71,58,52,14
+    PUSHBUTTON      "Помощь",IDC_HELP_CALC,131,58,52,14
+END
+
+IDD_ERROR_DIALOG DIALOGEX 0, 0, 220, 190
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_VISIBLE | WS_CAPTION
+CAPTION "Информация"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "ОК",IDC_EXIT_ERROR,85,168,51,14
+    LTEXT           "Static",IDC_ERROR_DESCRIPTION,7,7,206,160
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ENTER_FORMULA, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 190
+        TOPMARGIN, 11
+        BOTTOMMARGIN, 72
+        HORZGUIDE, 72
+    END
+
+    IDD_OPTIMIZATION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_CALCULATOR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_ERROR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
